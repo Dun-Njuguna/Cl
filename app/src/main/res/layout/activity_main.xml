@@ -1,18 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        >
 
-    <Button
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="first name"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="last_name"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="Date of birth"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/kra_pin"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="kra_pin"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/occupation"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="occupation"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/mobile_no"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="mobile no"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="email"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="location"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/postal_address"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="postal address"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/postal_code"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="postal code"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/town"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="town"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="country"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:editable="false"
+                android:text="Image"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/selectImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Image"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/nok_fullname"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="nok fullname"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/nok_mobileno"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="nok mobileno"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:id="@+id/nok_relation"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="nok relation"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <EditText
+            android:id="@+id/agent_code"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:text="agent code"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/submit_details"
+                    android:text="Submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</ScrollView>

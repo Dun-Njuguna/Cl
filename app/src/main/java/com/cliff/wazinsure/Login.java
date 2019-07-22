@@ -8,10 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
@@ -22,7 +28,7 @@ public class Login extends AppCompatActivity {
     TextView sign_up;
     String status = "ggg";
     Context context = this;
-
+    Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +66,42 @@ public class Login extends AppCompatActivity {
 
     }
 
+//    private void userLogin() throws IOException, InterruptedException {
+//        String user_name = username.getText().toString();
+//        String password = user_password.getText().toString();
+//        Context context = getApplicationContext();
+//        PostService postService = new PostService();
+//        postService.login(user_name, password);
+//
+//    }
+
     private void userLogin() throws IOException, InterruptedException {
+
         String user_name = username.getText().toString();
         String password = user_password.getText().toString();
+        Context context = getApplicationContext();
+        final PostService postService = new PostService();
 
-        PostService postService = new PostService();
-        postService.login(user_name, password);
+        postService.login(user_name, password, new Callback(){
 
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                postService.processResults(response);
+
+                    if (response.message().equals("success")){
+
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
+                    }
+
+
+            }
+        });
     }
 
 }
